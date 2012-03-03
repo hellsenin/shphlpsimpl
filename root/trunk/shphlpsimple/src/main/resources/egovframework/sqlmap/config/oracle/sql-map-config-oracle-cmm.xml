@@ -5,6 +5,4 @@
 <sqlMapConfig>						
 	<sqlMap resource="egovframework/sqlmap/com/cmm/use/EgovCmmUse_SQL_Oracle.xml"/>		
 	
-	<sqlMap resource="egovframework/sqlmap/com/cmm/fms/EgovFile_SQL_Oracle.xml"/>	
-			
 </sqlMapConfig>
