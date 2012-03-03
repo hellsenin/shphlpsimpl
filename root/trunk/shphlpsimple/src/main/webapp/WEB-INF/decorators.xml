@@ -1,0 +1,19 @@
+<decorators defaultdir="/WEB-INF/jsp">
+	<excludes>
+		<pattern>/ajax*</pattern>
+	</excludes>
+	
+	<decorator name="none"/>
+	
+	<decorator name="default" page="deco_default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	
+	<decorator name="wide" page="deco_wide.jsp">
+		<pattern>/member/getMember.html</pattern>
+		<pattern>/member/modifyMember.html</pattern>
+		<pattern>/member/loginMember.html</pattern>
+		<pattern>/member/list.html</pattern>
+		<pattern>/group/list.html</pattern>
+	</decorator>
+</decorators>
