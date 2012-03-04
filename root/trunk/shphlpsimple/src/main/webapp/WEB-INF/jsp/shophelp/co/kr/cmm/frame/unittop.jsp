@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="wrap">
-<div id="header">
+<div id="header">aa
 	<h1><img src="<c:url value='/images/egovframework/com/cmm/main/h1_logo.jpg' />" width="123" height="29" alt="egovframe"></h1>
 </div>
 </div>
