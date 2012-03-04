@@ -77,19 +77,19 @@
 	-->
 
 	<!-- 로그인 체크 인터셉터 -->
-	<bean id="authenticInterceptor" class="egovframework.com.cmm.interceptor.AuthenticInterceptor">
+<!--  	<bean id="authenticInterceptor" class="egovframework.com.cmm.interceptor.AuthenticInterceptor">  -->
 	<!-- 인증 체크가 필요 없는 URL 리스트  -->
-	
+	<!--
 		<property name="permittedURL">
 			<set>
-<!-- 				<value>/uat/uia/[a-zA-Z]+\.do</value> -->
+				<value>/uat/uia/[a-zA-Z]+\.do</value>
 				<value>/index.do</value>
 				<value>/index2.do</value>
 				<value>/uat/uia/actionLogin.do</value>
 			</set>
 		</property>
 	</bean>
-	
+	-->
 
 	<!--
 		- This bean resolves specific types of exceptions to corresponding logical
