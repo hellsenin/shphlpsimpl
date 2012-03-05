@@ -26,7 +26,7 @@ public class CouponController {
 	@RequestMapping(value = "/omnivore/pb/cpn/CouponCreation.do")
 	public String getCoupon(ModelMap model, DataRecord dataRecord) throws Exception {
 
-
+System.out.println("fff");
 		DataRecord dataRecordd = cooperationService.select(dataRecord);
 
 //		if (shptempVO.getTmp_col01() != null) {
