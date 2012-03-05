@@ -10,8 +10,8 @@ import egovframework.rte.fdl.cmmn.AbstractServiceImpl;
 public class CouponCreationServiceImpl extends AbstractServiceImpl implements
 		CouponCreationService {
 
-	@Resource(name = "shpTempDAO")
-	private ShpTempDAO shpTempDAO;
+//	@Resource(name = "shpTempDAO")
+//	private ShpTempDAO shpTempDAO;
 
 //	public ShpTempVO selectCoupon(ShpTempVO vo) throws Exception {
 //		return shpTempDAO.selectCoupon(vo);

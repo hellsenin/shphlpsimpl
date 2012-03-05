@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import egovframework.com.cmm.service.impl.EgovComAbstractDAO;
 
 @Repository("shpTempDAO")
-public class ShpTempDAO extends EgovComAbstractDAO {
+public class CouponCreationDAO extends EgovComAbstractDAO {
 
 	/*
 	 * @SuppressWarnings("unchecked") public List<ShpTempVO>
