@@ -5,4 +5,4 @@
 
 
 <a href="${ctx}/index.do">index.do</a>
-<a href="${ctx}/main.do">main.do</a>
+<a href="${ctx}/index2.do">main.do</a>

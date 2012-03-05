@@ -18,8 +18,8 @@ public class DataRecordReqArgumentResolver implements WebArgumentResolver {
 
 	private Log log = LogFactory.getLog(this.getClass());
 
-	@Resource(name = "SessionUtil")
-	private SessionUtil sessionUtil;
+//	@Resource(name = "SessionUtil")
+//	private SessionUtil sessionUtil;
 
 	/**
 	 * 
@@ -64,23 +64,23 @@ public class DataRecordReqArgumentResolver implements WebArgumentResolver {
 			}
 
 			/* session values 바인딩 */
-			if (sessionUtil.getSession(request.getSession()) != null) {
+//			if (sessionUtil.getSession(request.getSession()) != null) {
+//
+//				LoginVO login = sessionUtil.getSession(request.getSession());
+//
+//				form.put("s_user_id", login.getUser_id());
+//				form.put("s_user_nm", login.getUser_nm());
+//			}
+//
+//			DataRecord pmisRecord = new DataRecord();
+//			pmisRecord.putAll(form);
+//
+//			if (log.isDebugEnabled()) {
+//				log.debug("pmisRecord.toStringKey() : " + pmisRecord.toStringKey());
+//				log.debug("pmisRecord.toStringAll() : " + pmisRecord.toStringAll());
+//			}
 
-				LoginVO login = sessionUtil.getSession(request.getSession());
-
-				form.put("s_user_id", login.getUser_id());
-				form.put("s_user_nm", login.getUser_nm());
-			}
-
-			DataRecord pmisRecord = new DataRecord();
-			pmisRecord.putAll(form);
-
-			if (log.isDebugEnabled()) {
-				log.debug("pmisRecord.toStringKey() : " + pmisRecord.toStringKey());
-				log.debug("pmisRecord.toStringAll() : " + pmisRecord.toStringAll());
-			}
-
-			request.setAttribute("pmisRecord", pmisRecord);
+//			request.setAttribute("pmisRecord", pmisRecord);
 			return request;
 		}
 		return UNRESOLVED;

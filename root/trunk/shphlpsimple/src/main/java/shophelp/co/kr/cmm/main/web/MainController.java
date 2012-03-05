@@ -68,7 +68,7 @@ public class MainController implements ApplicationContextAware ,InitializingBean
 		LOG.info("EgovComIndexController setApplicationContext method has called!");
 	}
 
-	@RequestMapping("/main.do")
+	@RequestMapping("/index2.do")
 	public String index2(ModelMap model){
 		return "shophelp/co/kr/cmm/frame/mainframe";
 	}
