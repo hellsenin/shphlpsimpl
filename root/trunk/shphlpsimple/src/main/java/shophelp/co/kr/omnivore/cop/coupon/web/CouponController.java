@@ -1,8 +1,6 @@
 package shophelp.co.kr.omnivore.cop.coupon.web;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,22 +9,25 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import shophelp.co.kr.app.DataRecord;
-import shophelp.co.kr.biz.cop.coupon.CouponCreationService;
+import shophelp.co.kr.biz.services.cop.CooperationService;
+import egovframework.com.cmm.annotation.IncludedInfo;
 
 @Controller
-public class CouponCreationController {
+public class CouponController {
 
 	/** EgovCmmUseService */
-	@Resource(name = "CouponCreationService")
-	private CouponCreationService couponCreationService;
+	@Resource(name = "couponService")
+	private CooperationService cooperationService;
 
 	protected Log log = LogFactory.getLog(this.getClass());
 
+    @SuppressWarnings("rawtypes")
+	@IncludedInfo(name="쿠폰생성", order = 386, gid = 40)
 	@RequestMapping(value = "/omnivore/pb/cpn/CouponCreation.do")
-	public String getCoupon(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {
+	public String getCoupon(ModelMap model, DataRecord dataRecord) throws Exception {
 
 
-//		DataRecord dataRecord = couponCreationService.selectCoupon();
+		DataRecord dataRecordd = cooperationService.select(dataRecord);
 
 //		if (shptempVO.getTmp_col01() != null) {
 //			
@@ -37,7 +38,7 @@ public class CouponCreationController {
 //
 //		}
 
-//		model.addAttribute("SHPTEMP", dataRecord);
+		model.addAttribute("SHPTEMP", dataRecordd);
 		return "shophelp/co/kr/omnivore/pb/cpn/CouponView";
 	}
 
