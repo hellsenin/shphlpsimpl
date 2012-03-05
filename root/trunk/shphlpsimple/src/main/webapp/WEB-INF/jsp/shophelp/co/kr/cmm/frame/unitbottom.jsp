@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="wrap">
-<div id="footer">
+<div id="footer">bb
 	<p>Copyright(c)2011 Ministry of Public Administration and Security.</p>
 </div>
 </div>
