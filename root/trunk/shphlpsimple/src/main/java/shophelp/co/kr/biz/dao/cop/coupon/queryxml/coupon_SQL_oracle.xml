@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="biz.cmm.cop.coupon">
+
+	
+	<select id="biz.cmm.cop.coupon.select" parameterClass="shophelp.co.kr.app.DataRecord" resultClass="shophelp.co.kr.app.DataRecord">
+		<![CDATA[ 
+		  SELECT   tmp_div,
+		           tmp_seq,
+		           tmp_col00,
+		           tmp_col01
+		    FROM   shp_temp
+		   WHERE   tmp_div = 'CPN' 
+		   AND tmp_col01 = 'N' 
+		   AND ROWNUM = 1
+		ORDER BY   TMP_SEQ
+		]]>
+	</select>
+
+ 	<update id="update" parameterClass="shophelp.co.kr.app.DataRecord">
+ 		<![CDATA[
+			UPDATE shp_temp SET 
+				tmp_col01 = 'Y',
+				tmp_col02 = #tmp_col02#,
+				tmp_col03 = #tmp_col03#,
+				tmp_col04 = #tmp_col04#,
+				tmp_col09 = SYSDATE
+			WHERE tmp_div = #tmp_div#
+			AND tmp_seq = #tmp_seq#
+			
+ 		]]>
+ 	</update>
+
+
+</sqlMap>            
