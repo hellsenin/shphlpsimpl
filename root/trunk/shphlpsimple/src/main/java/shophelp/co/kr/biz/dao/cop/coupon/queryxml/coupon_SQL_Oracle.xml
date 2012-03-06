@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
 
-<sqlMap namespace="coupon">
+<sqlMap namespace="biz.cmm.cop.coupon">
 
-	<select id="select" parameterClass="dataRecord" resultMap="dataRecord">
+	
+	<select id="biz.cmm.cop.coupon.select" parameterClass="shophelp.co.kr.app.DataRecord" resultClass="shophelp.co.kr.app.DataRecord">
 		<![CDATA[ 
 		  SELECT   tmp_div,
 		           tmp_seq,
@@ -17,7 +18,7 @@
 		]]>
 	</select>
 
- 	<update id="update" parameterClass="dataRecord">
+ 	<update id="update" parameterClass="shophelp.co.kr.app.DataRecord">
  		<![CDATA[
 			UPDATE shp_temp SET 
 				tmp_col01 = 'Y',

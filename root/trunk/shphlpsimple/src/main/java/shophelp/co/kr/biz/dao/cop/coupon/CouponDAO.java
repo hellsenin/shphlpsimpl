@@ -10,8 +10,9 @@ public class CouponDAO extends EgovComAbstractDAO {
 
 	
 
+	@SuppressWarnings("rawtypes")
 	public DataRecord select(DataRecord dataRecord) throws Exception {
-		return (DataRecord) selectByPk("coupon.select", dataRecord);
+		return (DataRecord) selectByPk("biz.cmm.cop.coupon.select", dataRecord);
 
 	}
 

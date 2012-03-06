@@ -28,6 +28,7 @@ public class CouponController {
 
 System.out.println("fff");
 		DataRecord dataRecordd = cooperationService.select(dataRecord);
+		System.out.println("fff"+dataRecordd.get("TMP_COL00"));
 
 //		if (shptempVO.getTmp_col01() != null) {
 //			
