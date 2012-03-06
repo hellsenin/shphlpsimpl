@@ -200,7 +200,7 @@ input,textarea,select {
 
 <body>
 	<form name='form1'>
-		<textarea name='text1'>${SHPTEMP.tmp_col00}</textarea>
+		<textarea name='text1'>${SHPTEMP.TMP_COL00}</textarea>
 		<input type="button" value="copy" onclick="copyit('form1.text1');">
 	</form>
 			

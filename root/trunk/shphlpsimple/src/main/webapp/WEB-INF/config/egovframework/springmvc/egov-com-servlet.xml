@@ -53,6 +53,7 @@
 		<property name="customArgumentResolvers">
 			<list>
 				<bean class="egovframework.rte.ptl.mvc.bind.CommandMapArgumentResolver"/>
+				<bean class="shophelp.co.kr.app.DataRecordMapArgumentResolver"/>
 				<bean class="shophelp.co.kr.app.DataRecordReqArgumentResolver"/>
 			</list>
 		</property>
