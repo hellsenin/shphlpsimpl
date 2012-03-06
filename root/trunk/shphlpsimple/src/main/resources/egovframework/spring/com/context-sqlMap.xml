@@ -29,12 +29,15 @@
 		<property name="configLocations">
 			<list>
 				<value>classpath:/egovframework/sqlmap/config/${Globals.DbType}/*.xml</value>
-				<value>classpath:/egovframework/sqlmap/shophelp/sql-map-config.xml</value>
+				<value>classpath*:/egovframework/sqlmap/shophelp/sql-map-config.xml</value>
 			</list>
 		</property>
 		
 		<!-- Java 1.5 or higher and iBATIS 2.3.2 or higher REQUIRED -->
-		<property name="mappingLocations" value="classpath*:/shophelp/co/kr/biz/dao/**/queryxml/*${Globals.DbType}.xml" />
+		<property name="mappingLocations" value="classpath*:/shophelp/co/kr/biz/dao/**/queryxml/*.xml" />
+
+
+
 
 		<!-- property name="configLocation" value="WEB-INF/classes/egovframework/sqlmap/config/${Globals.DbType}/*.xml"/-->
 		

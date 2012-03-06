@@ -4,9 +4,8 @@
 
 <sqlMapConfig>
 
-	<settings cacheModelsEnabled="false" useStatementNamespaces="true" />
+	<settings cacheModelsEnabled="false" useStatementNamespaces="false" />
 
-	<typeAlias type="shophelp.co.kr.app.DataRecord" alias="dataRecord"/>
 
 	<sqlMap resource="egovframework/sqlmap/shophelp/dummy.xml" />
 
