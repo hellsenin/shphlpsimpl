@@ -3,9 +3,8 @@
     <wb-module deploy-name="shphlpsimple">
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/lib" source-path="/target/shphlpsimple/WEB-INF/lib"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
         <property name="context-root" value="shphlpsimple"/>
         <property name="java-output-path" value="/shphlpsimple/target/classes"/>
     </wb-module>
