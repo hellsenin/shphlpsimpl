@@ -2,13 +2,14 @@ package shophelp.co.kr.omnivore.cop.coupon.web;
 
 import javax.annotation.Resource;
 
+import mk11.app.DataRecord;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import shophelp.co.kr.app.DataRecord;
 import shophelp.co.kr.biz.services.cop.CooperationService;
 import egovframework.com.cmm.annotation.IncludedInfo;
 
