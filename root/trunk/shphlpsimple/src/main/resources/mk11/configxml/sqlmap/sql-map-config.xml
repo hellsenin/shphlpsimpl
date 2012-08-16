@@ -7,6 +7,6 @@
 	<settings cacheModelsEnabled="false" useStatementNamespaces="false" />
 
 
-	<sqlMap resource="egovframework/sqlmap/shophelp/dummy.xml" />
+	<sqlMap resource="mk11/configxml/sqlmap/dummy.xml" />
 
 </sqlMapConfig>

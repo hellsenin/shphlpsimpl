@@ -29,7 +29,7 @@
 		<property name="configLocations">
 			<list>
 				<value>classpath:/egovframework/sqlmap/config/${Globals.DbType}/*.xml</value>
-				<value>classpath*:/egovframework/sqlmap/shophelp/sql-map-config.xml</value>
+				<value>classpath*:/mk11/configxml/sqlmap/sql-map-config.xml</value>
 			</list>
 		</property>
 		

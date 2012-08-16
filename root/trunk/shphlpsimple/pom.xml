@@ -5,7 +5,7 @@
   <artifactId>shphlpsimple</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
-  <name>shphlpsimple</name>
+	<name>${artifactId}</name>
   <url>http://maven.apache.org</url>
 
 	<properties>
@@ -567,12 +567,24 @@
 			<version>1.7</version>
 		</dependency>
 
+
+
+
+		
+		<!-- 환경컴포넌트 2.0에서 2.1로 되며 groupId가 바꿨다. -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<directory>${basedir}/target</directory>
-		<finalName>test123.test123-webapp</finalName>
+		<finalName>${artifactId}</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
