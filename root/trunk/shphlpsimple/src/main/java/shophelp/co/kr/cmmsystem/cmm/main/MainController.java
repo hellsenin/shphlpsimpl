@@ -1,4 +1,4 @@
-package shophelp.co.kr.cmmsystem.cmm.main.web;
+package shophelp.co.kr.cmmsystem.cmm.main;
 
 /**
  * 컴포넌트 설치 후 설치된 컴포넌트들을 IncludedInfo annotation을 통해 찾아낸 후
