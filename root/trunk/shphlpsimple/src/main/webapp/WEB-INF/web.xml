@@ -5,9 +5,11 @@
 	<!-- 수정일 수성자 수정내용 ========== ======== ================================================= 
 		2011.09.19 이기하 filter 정리 2011.10.25 이기하 주석 추가 ************************************************************************************************ 
 		0. 로그인 정책 컴포넌트용 필터 : 주석 - 로그인 정책관리 패키지 설치 : egovframework-loginpolicy-2.0.0.zip 
-		1. Spring Security 필터 설정 : 사용 2. Spring Security 로그인/로그아웃 설정을 위한 필터 설정 : 
+		1. Spring Security 필터 설정 : 사용 
+		2. Spring Security 로그인/로그아웃 설정을 위한 필터 설정 : 
 		사용 - 권한관리 패키지 설치 : egovframework-authormanage-2.0.0.zip - context-egovuserdetailshelper.xml 
-		설정 : egovUserDetailsHelper 설정변경 3. EgovSSO 로그인/로그아웃 설정을 위한 필터 설정 : 주석 ************************************************************************************************ -->
+		설정 : egovUserDetailsHelper 설정변경 
+		3. EgovSSO 로그인/로그아웃 설정을 위한 필터 설정 : 주석 ************************************************************************************************ -->
 	<display-name>spring security</display-name>
 	<filter>
 		<filter-name>encodingFilter</filter-name>
@@ -36,7 +38,7 @@
 	</filter-mapping>
 	
 	
-	<!--========== Sitemesh ========== 
+	<!--========== Sitemesh ==========--> 
 	<filter>
 		<filter-name>sitemesh</filter-name>
 		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
@@ -48,7 +50,7 @@
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
 	</filter-mapping>
-	-->
+	
 	
 	<!-- 0. 로그인 정책 컴포넌트용 필터 -->
 	<!-- <filter> <filter-name>LoginPolicyFilter</filter-name> <filter-class>egovframework.com.uat.uap.filter.EgovLoginPolicyFilter</filter-class> 
