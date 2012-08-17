@@ -3,18 +3,13 @@ package mk11.app;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebArgumentResolver;
 import org.springframework.web.context.request.NativeWebRequest;
 
-import egovframework.com.cmm.LoginVO;
-
-public class DataRecordMapArgumentResolver implements WebArgumentResolver {
+public class DataMapArgumentResolver implements WebArgumentResolver {
 
 	private Log log = LogFactory.getLog(this.getClass());
 
@@ -39,7 +34,7 @@ public class DataRecordMapArgumentResolver implements WebArgumentResolver {
 		Class<?> clazz = methodParameter.getParameterType();
 		String paramName = methodParameter.getParameterName();
 
-		if (clazz.equals(DataRecord.class) && paramName.equals("dataRecord")) {
+		if (clazz.equals(DataMap.class) && paramName.equals("dataRecord")) {
 
 			/* form values 바인딩 */
 			HashMap<String, Object> form = new HashMap<String, Object>();
@@ -69,7 +64,7 @@ public class DataRecordMapArgumentResolver implements WebArgumentResolver {
 			// form.put("s_user_nm", login.getUser_nm());
 			// }
 			//
-			DataRecord dataRecord = new DataRecord();
+			DataMap dataRecord = new DataMap();
 			dataRecord.putAll(form);
 
 			if (log.isDebugEnabled()) {

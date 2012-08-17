@@ -3,7 +3,6 @@ package mk11.app;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.logging.Log;
@@ -12,20 +11,20 @@ import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebArgumentResolver;
 import org.springframework.web.context.request.NativeWebRequest;
 
-import egovframework.com.cmm.LoginVO;
-
-public class DataRecordReqArgumentResolver implements WebArgumentResolver {
+public class DataReqArgumentResolver implements WebArgumentResolver {
 
 	private Log log = LogFactory.getLog(this.getClass());
 
-//	@Resource(name = "SessionUtil")
-//	private SessionUtil sessionUtil;
+	// @Resource(name = "SessionUtil")
+	// private SessionUtil sessionUtil;
 
 	/**
 	 * 
-	 * Ex) public String method(HttpServletRequest pmisReq){ PmisRecord pmis = (PmisRecord) pmisReq.getAttribute("pmisReq"); pmis.get("user_id");
-	 * System.out.println("toStringAll() == : "+pmis.toStringAll()); //Business~~!! Object = biz(); pmisReq.setAttribute("KEY", Object); return
-	 * "cm/login/loginHidden"; }
+	 * Ex) public String method(HttpServletRequest pmisReq){ PmisRecord pmis =
+	 * (PmisRecord) pmisReq.getAttribute("pmisReq"); pmis.get("user_id");
+	 * System.out.println("toStringAll() == : "+pmis.toStringAll());
+	 * //Business~~!! Object = biz(); pmisReq.setAttribute("KEY", Object);
+	 * return "cm/login/loginHidden"; }
 	 * 
 	 * @see org.springframework.web.bind.support.WebArgumentResolver#resolveArgument(org.springframework.core.MethodParameter,
 	 *      org.springframework.web.context.request.NativeWebRequest)
@@ -34,15 +33,18 @@ public class DataRecordReqArgumentResolver implements WebArgumentResolver {
 	 * @return
 	 * @throws Exception
 	 */
-	public Object resolveArgument(MethodParameter methodParameter, NativeWebRequest webRequest) throws Exception {
+	public Object resolveArgument(MethodParameter methodParameter,
+			NativeWebRequest webRequest) throws Exception {
 
 		Class<?> clazz = methodParameter.getParameterType();
 		String paramName = methodParameter.getParameterName();
 
-		// if (clazz.equals(HttpServletRequest.class) && paramName.equals("pmisReq")) {
+		// if (clazz.equals(HttpServletRequest.class) &&
+		// paramName.equals("pmisReq")) {
 		if (clazz.equals(HttpServletRequest.class)) {
 
-			HttpServletRequest request = (HttpServletRequest) webRequest.getNativeRequest();
+			HttpServletRequest request = (HttpServletRequest) webRequest
+					.getNativeRequest();
 
 			/* form values 바인딩 */
 			HashMap<String, Object> form = new HashMap<String, Object>();
@@ -64,23 +66,25 @@ public class DataRecordReqArgumentResolver implements WebArgumentResolver {
 			}
 
 			/* session values 바인딩 */
-//			if (sessionUtil.getSession(request.getSession()) != null) {
-//
-//				LoginVO login = sessionUtil.getSession(request.getSession());
-//
-//				form.put("s_user_id", login.getUser_id());
-//				form.put("s_user_nm", login.getUser_nm());
-//			}
-//
-//			DataRecord pmisRecord = new DataRecord();
-//			pmisRecord.putAll(form);
-//
-//			if (log.isDebugEnabled()) {
-//				log.debug("pmisRecord.toStringKey() : " + pmisRecord.toStringKey());
-//				log.debug("pmisRecord.toStringAll() : " + pmisRecord.toStringAll());
-//			}
+			// if (sessionUtil.getSession(request.getSession()) != null) {
+			//
+			// LoginVO login = sessionUtil.getSession(request.getSession());
+			//
+			// form.put("s_user_id", login.getUser_id());
+			// form.put("s_user_nm", login.getUser_nm());
+			// }
+			//
+			// DataRecord pmisRecord = new DataRecord();
+			// pmisRecord.putAll(form);
+			//
+			// if (log.isDebugEnabled()) {
+			// log.debug("pmisRecord.toStringKey() : " +
+			// pmisRecord.toStringKey());
+			// log.debug("pmisRecord.toStringAll() : " +
+			// pmisRecord.toStringAll());
+			// }
 
-//			request.setAttribute("pmisRecord", pmisRecord);
+			// request.setAttribute("pmisRecord", pmisRecord);
 			return request;
 		}
 		return UNRESOLVED;
