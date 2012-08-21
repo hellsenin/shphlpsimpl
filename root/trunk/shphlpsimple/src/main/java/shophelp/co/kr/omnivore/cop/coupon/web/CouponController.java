@@ -3,7 +3,6 @@ package shophelp.co.kr.omnivore.cop.coupon.web;
 import javax.annotation.Resource;
 
 import mk11.app.DataMap;
-import mk11.biz.services.CouponCreationService;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
